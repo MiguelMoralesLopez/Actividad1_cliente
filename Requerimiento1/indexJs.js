@@ -1,6 +1,9 @@
 /* Creo la funcion cargarDatos para que el contenido del js se muestre en el html*/
 function cargarDatos(){
 
+let br1 = document.createElement("br");
+let brFotos = document.createElement("br");
+
 /* Creacion del formulario, fieldset y legend */ 
 let form = document.createElement("form"); //<form></form>
 form.setAttribute = ("action","procesar.jsp"); //<form action="procesar.jsp"></form>
@@ -88,7 +91,6 @@ let l2cont = document.createTextNode("2 Jugadores");
 l2.appendChild(l2cont);
 
 let inputJugadores2 = document.createElement("input")
-inputJugadores2.id = "j2";
 inputJugadores2.name = "jugadores";
 inputJugadores2.type = "radio";
 inputJugadores2.value = "2";
@@ -163,6 +165,31 @@ let labelExperiencia = document.createElement("label");
 let contExp = document.createTextNode("Experiencias: ");
 labelExperiencia.appendChild(contExp);
 
+let experiencia = [
+    {
+        nombre: "Terror",
+        value: "terror"
+    },
+    {
+        nombre: "Accion",
+        value: "Accion"
+    },
+    {
+        nombre: "terror",
+        value: "terror"
+    },
+    {
+        nombre: "terror",
+        value: "terror"
+    },
+    {
+        nombre: "terror",
+        value: "terror"
+    }
+]
+
+
+
 
 
 /* Introduzco el formulario en el div del html*/
@@ -171,6 +198,7 @@ document.getElementById("contenedor").appendChild(form); //<body><div id="conten
 /* Introduzco los label, los input en el formulario*/
 fieldset.appendChild(labelDni);
 fieldset.appendChild(inputDni);
+fieldset.appendChild(br1);
 fieldset.appendChild(labelNombre);
 fieldset.appendChild(inputNombre);
 fieldset.appendChild(labelApellidos);
@@ -192,6 +220,27 @@ fieldset.appendChild(imgAccion);
 fieldset.appendChild(imgFantasia);
 fieldset.appendChild(imgAventura);
 fieldset.appendChild(imgInfantil);
+fieldset.appendChild(brFotos);
+
+
+/* Creo un for para introducir todos los checkbox*/
+for (let check of experiencia){
+    let nombreCheck = document.createElement("span");
+    if (check.nombre == "Terror"){
+        nombreCheck.style.paddingLeft = "4%";   
+    }else if(check.nombre == "Accion"){
+        nombreCheck.style.paddingLeft = "6%";  
+    }
+    
+    let contNombreCheck = document.createTextNode(check.nombre);
+    nombreCheck.appendChild(contNombreCheck);
+    fieldset.appendChild(nombreCheck);
+    let checkboxExperiencia = document.createElement("input");
+    checkboxExperiencia.type = "checkbox";
+    checkboxExperiencia.name = check.nombre;
+    checkboxExperiencia.value = check.value;
+    fieldset.appendChild(checkboxExperiencia);
+}
 
 
 
