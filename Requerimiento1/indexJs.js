@@ -115,7 +115,7 @@ function crearNodos(){
             labelCont: 'Unisex'
         },
     ]
-
+    
     for(let radio of radioButton1){
         let input = document.createElement("input")
         input.type = "radio";
