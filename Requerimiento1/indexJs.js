@@ -88,6 +88,7 @@ let l2cont = document.createTextNode("2 Jugadores");
 l2.appendChild(l2cont);
 
 let inputJugadores2 = document.createElement("input")
+inputJugadores2.id = "j2";
 inputJugadores2.name = "jugadores";
 inputJugadores2.type = "radio";
 inputJugadores2.value = "2";
@@ -158,8 +159,9 @@ imgInfantil.title = "Experiencia infantil";
 imgInfantil.alt = "Experiencia infantil";
 
 /* Creo los campos checkbox del formulario */
-
-
+let labelExperiencia = document.createElement("label");
+let contExp = document.createTextNode("Experiencias: ");
+labelExperiencia.appendChild(contExp);
 
 
 
@@ -182,6 +184,7 @@ labelJugadores.appendChild(l2);
 labelJugadores.appendChild(l4);
 labelJugadores.appendChild(l6);
 labelJugadores.appendChild(l10);
+fieldset.appendChild(labelExperiencia)
 
 /* Introduzco las fotos en el formulario*/
 fieldset.appendChild(imgTerror);
