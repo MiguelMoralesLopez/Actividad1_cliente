@@ -76,7 +76,54 @@ inputTelefono.type = "tel";
 inputTelefono.placeholder = "Escribe tu número de teléfono"
 
 /* Creo los campos radio del formulario */
+let labelJugadores = document.createElement("label");
+labelJugadores.for = "jugadores";
+let contJugadores = document.createTextNode("Número de jugadores  ");
+labelJugadores.appendChild(contJugadores);
 
+// 2 Jugadores
+let l2 = document.createElement("label");
+let l2cont = document.createTextNode("2 Jugadores");
+l2.appendChild(l2cont);
+
+let inputJugadores2 = document.createElement("input")
+inputJugadores2.name = "jugadores";
+inputJugadores2.type = "radio";
+inputJugadores2.value = "2";
+l2.appendChild(inputJugadores2);
+
+//3 a 4 Jugadores
+let l4 = document.createElement("label");
+let l4cont = document.createTextNode(" De 3 a 4 Jugadores");
+l4.appendChild(l4cont);
+
+let inputJugadores4 = document.createElement("input");
+inputJugadores4.name = "jugadores";
+inputJugadores4.type = "radio";
+inputJugadores4.value = "6";
+l4.appendChild(inputJugadores4);
+
+// 5 a 6 Jugadores
+let l6 = document.createElement("label");
+let l6cont = document.createTextNode("De 5 a 6 Jugadores");
+l6.appendChild(l6cont);
+
+let inputJugadores6 = document.createElement("input");
+inputJugadores6.name = "jugadores";
+inputJugadores6.type = "radio";
+inputJugadores6.value = "6";
+l6.appendChild(inputJugadores6);
+
+// 7 a 10 Jugadores
+let l10 = document.createElement("label");
+let l10cont = document.createTextNode("De 7 a 10 Jugadores");
+l10.appendChild(l10cont);
+
+let inputJugadores10 = document.createElement("input");
+inputJugadores10.name = "jugadores";
+inputJugadores6.type = "radio";
+inputJugadores10.value = "10";
+l10.appendChild(inputJugadores10);
 
 
 /* Introduzco el formulario en el div del html*/
@@ -93,7 +140,11 @@ fieldset.appendChild(labelDireccion);
 fieldset.appendChild(inputDireccion);
 fieldset.appendChild(labelTelefono);
 fieldset.appendChild(inputTelefono);
-
+fieldset.appendChild(labelJugadores);
+labelJugadores.appendChild(l2);
+labelJugadores.appendChild(l4);
+labelJugadores.appendChild(l6);
+labelJugadores.appendChild(l10);
 
 
 
