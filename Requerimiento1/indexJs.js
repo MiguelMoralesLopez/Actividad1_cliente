@@ -14,7 +14,7 @@ legend.appendChild(contenidoLegend);
 form.appendChild(fieldset);
 
 
-/* Creo los label y los input que usaré en el formulario */
+/* Creo los label y los input tipo text que usaré en el formulario */
 //DNI
 let labelDni = document.createElement("label"); //<label></label>
 labelDni.for = "dni"; // <label for="dni"></label>
@@ -26,6 +26,7 @@ inputDni.setAttribute = ("id", "dni"); //<input id="dni"></input>
 inputDni.setAttribute = ("name","dni"); //<input id="dni" name="dni"></input>
 inputDni.setAttribute = ("type","text"); //<input id="dni" name="dni" type="text"></input>
 inputDni.placeholder = ("Introduce tu DNI"); //<input id="dni" type="text" name="dni" placeholder="Introduce tu dni"></input>
+
 
 //Nombre
 let labelNombre = document.createElement("label"); //<label></label>
@@ -75,7 +76,7 @@ inputTelefono.name = "telefono";
 inputTelefono.type = "tel";
 inputTelefono.placeholder = "Escribe tu número de teléfono"
 
-/* Creo los campos radio del formulario */
+/* Creo los campos radio que usaré en el formulario */
 let labelJugadores = document.createElement("label");
 labelJugadores.for = "jugadores";
 let contJugadores = document.createTextNode("Número de jugadores  ");
@@ -125,11 +126,47 @@ inputJugadores6.type = "radio";
 inputJugadores10.value = "10";
 l10.appendChild(inputJugadores10);
 
+/* Creo las imagenes */
+let imgTerror = document.createElement("img");
+imgTerror.src = "img/terror.png";
+imgTerror.style.width = "10%";
+imgTerror.title = "Experiencia terror"
+imgTerror.alt = "Experiencia terror";
+
+let imgAccion = document.createElement("img");
+imgAccion.src = "img/accion.png";
+imgAccion.style.width = "10%";
+imgAccion.title = "Experiencia acción";
+imgAccion.alt = "Experiencia acción";
+
+let imgFantasia = document.createElement("img");
+imgFantasia.src = "img/fantasia.png";
+imgFantasia.style.width = "10%";
+imgFantasia.title = "Experiencia fantasia";
+imgFantasia.alt = "Experiencia fantasia";
+
+let imgAventura = document.createElement("img");
+imgAventura.src = "img/aventura.png";
+imgAventura.style.width = "10%";
+imgAventura.title = "Experiencia aventura";
+imgAventura.alt = "Experiencia aventura";
+
+let imgInfantil = document.createElement("img");
+imgInfantil.src = "img/infantil.png";
+imgInfantil.style.width = "10%";
+imgInfantil.title = "Experiencia infantil";
+imgInfantil.alt = "Experiencia infantil";
+
+/* Creo los campos checkbox del formulario */
+
+
+
+
 
 /* Introduzco el formulario en el div del html*/
 document.getElementById("contenedor").appendChild(form); //<body><div id="contenedor"><form> ... </form></div></body>
 
-/* Introduzco los label y los input en el formulario*/
+/* Introduzco los label, los input en el formulario*/
 fieldset.appendChild(labelDni);
 fieldset.appendChild(inputDni);
 fieldset.appendChild(labelNombre);
@@ -145,6 +182,14 @@ labelJugadores.appendChild(l2);
 labelJugadores.appendChild(l4);
 labelJugadores.appendChild(l6);
 labelJugadores.appendChild(l10);
+
+/* Introduzco las fotos en el formulario*/
+fieldset.appendChild(imgTerror);
+fieldset.appendChild(imgAccion);
+fieldset.appendChild(imgFantasia);
+fieldset.appendChild(imgAventura);
+fieldset.appendChild(imgInfantil);
+
 
 
 
