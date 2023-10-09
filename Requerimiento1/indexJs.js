@@ -1,7 +1,28 @@
 /* Creo la funcion cargarDatos para que el contenido del js se muestre en el html*/
 function cargarDatos(){
 
+/* Creación de los br que utilizará la página*/ 
 let br1 = document.createElement("br");
+let br2 = document.createElement("br");
+let br3 = document.createElement("br");
+let br4 = document.createElement("br");
+let br5 = document.createElement("br");
+let br6 = document.createElement("br");
+let br7 = document.createElement("br");
+let br8 = document.createElement("br");
+let br9 = document.createElement("br");
+let br10 = document.createElement("br");
+let br11 = document.createElement("br");
+let br12 = document.createElement("br");
+let br13 = document.createElement("br");
+let br14 = document.createElement("br");
+let br15 = document.createElement("br");
+let br16 = document.createElement("br");
+let br17 = document.createElement("br");
+let br18 = document.createElement("br");
+let br19 = document.createElement("br");
+let br20 = document.createElement("br");
+let br21 = document.createElement("br");
 let brFotos = document.createElement("br");
 
 /* Creacion del formulario, fieldset y legend */ 
@@ -82,7 +103,7 @@ inputTelefono.placeholder = "Escribe tu número de teléfono"
 /* Creo los campos radio que usaré en el formulario */
 let labelJugadores = document.createElement("label");
 labelJugadores.for = "jugadores";
-let contJugadores = document.createTextNode("Número de jugadores  ");
+let contJugadores = document.createTextNode("Número de jugadores: ");
 labelJugadores.appendChild(contJugadores);
 
 // 2 Jugadores
@@ -125,7 +146,7 @@ l10.appendChild(l10cont);
 
 let inputJugadores10 = document.createElement("input");
 inputJugadores10.name = "jugadores";
-inputJugadores6.type = "radio";
+inputJugadores10.type = "radio";
 inputJugadores10.value = "10";
 l10.appendChild(inputJugadores10);
 
@@ -175,22 +196,18 @@ let experiencia = [
         value: "Accion"
     },
     {
-        nombre: "terror",
-        value: "terror"
+        nombre: "Fantasia",
+        value: "fantasia"
     },
     {
-        nombre: "terror",
-        value: "terror"
+        nombre: "Aventura",
+        value: "aventura"
     },
     {
-        nombre: "terror",
-        value: "terror"
+        nombre: "Infantil",
+        value: "infantil"
     }
 ]
-
-
-
-
 
 /* Introduzco el formulario en el div del html*/
 document.getElementById("contenedor").appendChild(form); //<body><div id="contenedor"><form> ... </form></div></body>
@@ -199,20 +216,36 @@ document.getElementById("contenedor").appendChild(form); //<body><div id="conten
 fieldset.appendChild(labelDni);
 fieldset.appendChild(inputDni);
 fieldset.appendChild(br1);
+fieldset.appendChild(br9);
 fieldset.appendChild(labelNombre);
 fieldset.appendChild(inputNombre);
+fieldset.appendChild(br2);
+fieldset.appendChild(br10);
 fieldset.appendChild(labelApellidos);
 fieldset.appendChild(inputApellidos);
+fieldset.appendChild(br3);
+fieldset.appendChild(br11);
 fieldset.appendChild(labelDireccion);
 fieldset.appendChild(inputDireccion);
+fieldset.appendChild(br4);
+fieldset.appendChild(br12);
 fieldset.appendChild(labelTelefono);
 fieldset.appendChild(inputTelefono);
+fieldset.appendChild(br5);
+fieldset.appendChild(br13);
 fieldset.appendChild(labelJugadores);
+fieldset.appendChild(br6);
+labelJugadores.appendChild(br14);
 labelJugadores.appendChild(l2);
+l2.appendChild(br15)
 labelJugadores.appendChild(l4);
+l4.appendChild(br16)
 labelJugadores.appendChild(l6);
+l6.appendChild(br17)
 labelJugadores.appendChild(l10);
-fieldset.appendChild(labelExperiencia)
+fieldset.appendChild(br7);
+fieldset.appendChild(labelExperiencia);
+fieldset.appendChild(br8);
 
 /* Introduzco las fotos en el formulario*/
 fieldset.appendChild(imgTerror);
@@ -227,8 +260,14 @@ fieldset.appendChild(brFotos);
 for (let check of experiencia){
     let nombreCheck = document.createElement("span");
     if (check.nombre == "Terror"){
-        nombreCheck.style.paddingLeft = "4%";   
+        nombreCheck.style.paddingLeft = "3.8%";   
     }else if(check.nombre == "Accion"){
+        nombreCheck.style.paddingLeft = "6.2%";  
+    }else if(check.nombre == "Fantasia"){
+        nombreCheck.style.paddingLeft = "6.5%";  
+    }else if(check.nombre == "Aventura"){
+        nombreCheck.style.paddingLeft = "5.5%";  
+    }else if(check.nombre == "Infantil"){
         nombreCheck.style.paddingLeft = "6%";  
     }
     
