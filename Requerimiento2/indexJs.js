@@ -1,6 +1,7 @@
 let precioTotal = 0;
 
 function calcularPrecio(){
+    validarFormulario()
     precio.parentNode.removeChild(precio);
     let size = 0
     size = comprobarSize()
@@ -27,18 +28,12 @@ function comprobarSize(){
         precioSize = 10
     else if(document.getElementById("grande").checked)
         precioSize = 15
-    else 
-        alert('Debes seleccionar un tamaño de pizza')
 
     return precioSize
 }
 
 function comprobarIngredientes(){
     let precioIng = 0;
-
-    if((document.getElementById("pepperoni").checked == false) && (document.getElementById("bacon").checked == false)
-        && (document.getElementById("anchoas").checked == false) && (document.getElementById("huevo").checked == false))
-            alert('Debes seleccionar al menos un ingrediente.');
     
     if(document.getElementById("pepperoni").checked)
         precioIng++
@@ -72,11 +67,3 @@ function validarFormulario(){
     
 }
 
-function resetPrecio(){
-    precio.parentNode.removeChild(precio);
-    let nuevoPrecio = document.createTextNode("Precio total: ")
-    let nuevoP = document.createElement("p")
-    nuevoP.appendChild(nuevoPrecio)
-    nuevoP.id = "precio"
-    formulario.appendChild(nuevoP)
-}
