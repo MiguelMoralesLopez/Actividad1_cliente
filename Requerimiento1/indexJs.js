@@ -281,7 +281,7 @@ function crearNodos(){
     comentarios.cols = "50";
     formulario.appendChild(comentarios);
     let br = document.createElement("br");
-    formulario.appendChild(br)
+    formulario.appendChild(br);
 
     let submit = document.createElement("input");
     submit.type = "submit"
@@ -289,4 +289,5 @@ function crearNodos(){
     let reset = document.createElement("input");
     reset.type = "reset";
     formulario.appendChild(reset)
+    
 }

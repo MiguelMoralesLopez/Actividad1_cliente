@@ -7,6 +7,54 @@
     <script type="text/javascript" src="indexJs.js"></script>
 </head>
 <body>
-    
+    <form>
+        <fieldset>
+            <legend>
+                Formulario de pedido
+            </legend>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre." required/>
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos." required/>
+            <br/>
+            <label for="direccion">Dirección: </label>
+            <input type="text" id="direccion" name="direccion" placeholder="Introduce tu dirección." required/>
+            <label for="tlf">Teléfono: </label>
+            <input type="text" id="tlf" name="tlf" placeholder="Introduce tu teléfono." required/>
+            <br/>
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email" placeholder="Introduce tu email." required/>
+            <p >Elige un tamaño de pizza:</p>
+            <input type="radio" id="peq" name="tipoPizza" value="peq"/>
+            <label for="peq">Pequeña</label>
+            <input type="radio" id="med" name="tipoPizza" value="med"/>
+            <label for="med">Mediana</label>
+            <input type="radio" id="grande" name="tipoPizza" value="grande"/>
+            <label for="grande">Grande</label>
+            <p>Elige tus ingredientes:</p>
+            <input type="checkbox" id="pepperoni" name="ingr" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input type="checkbox" id="bacon" name="ingr" value="bacon">
+            <label for="bacon">Bacon</label>
+            <input type="checkbox" id="anchoas" name="ingr" value="anchoas">
+            <label for="anchoas">Anchoas</label>
+            <input type="checkbox" id="huevo" name="ingr" value="huevo">
+            <label for="huevo">Huevo</label>
+            <p>Precio total: </p>
+            <input type="submit" onclick="calcularPrecio()">
+            <input type="reset">
+
+        </fieldset>
+    </form>
 </body>
 </html>
+
+<!-- 
+Nombre
+Dirección
+Teléfono
+Email
+Un radio button con el tamaño de la pizza, pudiendo ser pequeña, mediana o grande
+4 Checkbox con los diferentes ingredientes de la pizza
+Un botón de procesar el pedido
+-->
