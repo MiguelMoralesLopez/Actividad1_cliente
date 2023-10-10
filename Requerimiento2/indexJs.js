@@ -12,7 +12,7 @@ function calcularPrecio(){
     console.log(precioTotal)
 
     
-    let nuevoPrecio = document.createTextNode("Precio total: " + precioTotal)
+    let nuevoPrecio = document.createTextNode("Precio total: " + precioTotal + "€")
     let nuevoP = document.createElement("p")
     nuevoP.appendChild(nuevoPrecio)
     nuevoP.id = "precio"
