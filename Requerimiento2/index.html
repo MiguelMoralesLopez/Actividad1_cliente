@@ -8,7 +8,7 @@
 </head>
 <body>
     <form>
-        <fieldset>
+        <fieldset id = formulario>
             <legend>
                 Formulario de pedido
             </legend>
@@ -40,9 +40,10 @@
             <label for="anchoas">Anchoas</label>
             <input type="checkbox" id="huevo" name="ingr" value="huevo">
             <label for="huevo">Huevo</label>
-            <p>Precio total: </p>
-            <input type="submit" onclick="calcularPrecio()">
-            <input type="reset">
+            <br/>
+            <br/>
+            <button type="button" onclick="calcularPrecio()">Calcular precio</button>
+            <p id="precio">Precio total: </p>
 
         </fieldset>
     </form>
