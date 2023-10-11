@@ -53,6 +53,7 @@ inputDni.setAttribute = ("id", "dni"); //<input id="dni"></input>
 inputDni.setAttribute = ("name","dni"); //<input id="dni" name="dni"></input>
 inputDni.setAttribute = ("type","text"); //<input id="dni" name="dni" type="text"></input>
 inputDni.placeholder = ("Introduce tu DNI"); //<input id="dni" type="text" name="dni" placeholder="Introduce tu dni"></input>
+inputDni.required = "true";
 
 //Nombre
 let labelNombre = document.createElement("label"); //<label></label>
@@ -350,7 +351,6 @@ restablecer.value = "Restablecer datos";
 /* Inserto los inputs enviar y reset */
 fieldset.appendChild(enviar);
 fieldset.appendChild(restablecer);
-
 
 
 /* Introduzco el formulario en el div del html*/
