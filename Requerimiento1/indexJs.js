@@ -237,11 +237,11 @@ fieldset.appendChild(labelJugadores);
 fieldset.appendChild(br6);
 labelJugadores.appendChild(br14);
 labelJugadores.appendChild(l2);
-l2.appendChild(br15)
+l2.appendChild(br15);
 labelJugadores.appendChild(l4);
-l4.appendChild(br16)
+l4.appendChild(br16);
 labelJugadores.appendChild(l6);
-l6.appendChild(br17)
+l6.appendChild(br17);
 labelJugadores.appendChild(l10);
 fieldset.appendChild(br7);
 fieldset.appendChild(labelExperiencia);
@@ -260,7 +260,7 @@ fieldset.appendChild(brFotos);
 for (let check of experiencia){
     let nombreCheck = document.createElement("span");
     if (check.nombre == "Terror"){
-        nombreCheck.style.paddingLeft = "3.8%";   
+        nombreCheck.style.paddingLeft = "3.8%"; 
     }else if(check.nombre == "Accion"){
         nombreCheck.style.paddingLeft = "6.2%";  
     }else if(check.nombre == "Fantasia"){
@@ -281,7 +281,15 @@ for (let check of experiencia){
     fieldset.appendChild(checkboxExperiencia);
 }
 
+/* Creo los select*/
+let dia = document.createElement("label");
+dia.for = "dia";
+let contdia = document.createTextNode("Elige el dia : ");
+dia.appendChild(contdia);
 
+
+/* Inserto los campos del select, textarea, submit y reset */
+fieldset.appendChild(dia);
 
 
 console.log(form);
