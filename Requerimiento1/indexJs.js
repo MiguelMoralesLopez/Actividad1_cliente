@@ -23,6 +23,10 @@ let br18 = document.createElement("br");
 let br19 = document.createElement("br");
 let br20 = document.createElement("br");
 let br21 = document.createElement("br");
+let br22 = document.createElement("br");
+let br23 = document.createElement("br");
+let br24 = document.createElement("br");
+let br25 = document.createElement("br");
 let brFotos = document.createElement("br");
 
 /* Creacion del formulario, fieldset y legend */ 
@@ -37,7 +41,6 @@ fieldset.appendChild(legend);
 legend.appendChild(contenidoLegend);
 form.appendChild(fieldset);
 
-
 /* Creo los label y los input tipo text que usaré en el formulario */
 //DNI
 let labelDni = document.createElement("label"); //<label></label>
@@ -50,7 +53,6 @@ inputDni.setAttribute = ("id", "dni"); //<input id="dni"></input>
 inputDni.setAttribute = ("name","dni"); //<input id="dni" name="dni"></input>
 inputDni.setAttribute = ("type","text"); //<input id="dni" name="dni" type="text"></input>
 inputDni.placeholder = ("Introduce tu DNI"); //<input id="dni" type="text" name="dni" placeholder="Introduce tu dni"></input>
-
 
 //Nombre
 let labelNombre = document.createElement("label"); //<label></label>
@@ -209,9 +211,6 @@ let experiencia = [
     }
 ]
 
-/* Introduzco el formulario en el div del html*/
-document.getElementById("contenedor").appendChild(form); //<body><div id="contenedor"><form> ... </form></div></body>
-
 /* Introduzco los label, los input en el formulario*/
 fieldset.appendChild(labelDni);
 fieldset.appendChild(inputDni);
@@ -255,7 +254,6 @@ fieldset.appendChild(imgAventura);
 fieldset.appendChild(imgInfantil);
 fieldset.appendChild(brFotos);
 
-
 /* Creo un for para introducir todos los checkbox*/
 for (let check of experiencia){
     let nombreCheck = document.createElement("span");
@@ -274,13 +272,17 @@ for (let check of experiencia){
     let contNombreCheck = document.createTextNode(check.nombre);
     nombreCheck.appendChild(contNombreCheck);
     fieldset.appendChild(nombreCheck);
+
     let checkboxExperiencia = document.createElement("input");
     checkboxExperiencia.type = "checkbox";
     checkboxExperiencia.name = check.nombre;
     checkboxExperiencia.value = check.value;
     fieldset.appendChild(checkboxExperiencia);
-}
 
+    if(check.nombre == "Infantil")
+        fieldset.appendChild(br18);
+        fieldset.appendChild(br19);
+}
 
 /* Creo los select*/
 let dia = document.createElement("label");
@@ -312,9 +314,46 @@ dia.appendChild(elegirDia);
 elegirDia.appendChild(viernes);
 elegirDia.appendChild(sabado);
 elegirDia.appendChild(domingo);
+fieldset.appendChild(br20);
+fieldset.appendChild(br21);
+
+/* Creación del textarea */
+
+let observaciones = document.createElement("label");
+observaciones.for = "obs";
+let contObs = document.createTextNode("Observaciones: ");
+observaciones.appendChild(contObs);
+
+let obs = document.createElement("textarea");
+obs.name = "obs";
+obs.placeholder = "Observaciones";
+obs.rows ="4";
+obs.cols = "35";
+
+/*Inserto el textarea en el formulario */
+fieldset.appendChild(observaciones);
+observaciones.appendChild(obs);
+observaciones.appendChild(br22);
+observaciones.appendChild(br23);
+
+/* Creo los inputs submit y reset */
+let enviar = document.createElement("input");
+enviar.type = "submit";
+enviar.value = "Enviar";
+enviar.style.marginLeft= "7%";
+enviar.style.marginRight= "1%";
+
+let restablecer = document.createElement("input");
+restablecer.type = "reset";
+restablecer.value = "Restablecer datos";
+
+/* Inserto los inputs enviar y reset */
+fieldset.appendChild(enviar);
+fieldset.appendChild(restablecer);
 
 
 
-
+/* Introduzco el formulario en el div del html*/
+document.getElementById("contenedor").appendChild(form); //<body><div id="contenedor"><form> ... </form></div></body>
 
 }
