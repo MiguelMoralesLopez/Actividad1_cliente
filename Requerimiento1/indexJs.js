@@ -281,17 +281,40 @@ for (let check of experiencia){
     fieldset.appendChild(checkboxExperiencia);
 }
 
+
 /* Creo los select*/
 let dia = document.createElement("label");
 dia.for = "dia";
 let contdia = document.createTextNode("Elige el dia : ");
 dia.appendChild(contdia);
 
+let elegirDia = document.createElement("select");
+elegirDia.name= "dia";
 
-/* Inserto los campos del select, textarea, submit y reset */
+let viernes = document.createElement("option");
+viernes.value="vie";
+let contViernes = document.createTextNode("VIERNES");
+viernes.appendChild(contViernes);
+
+let sabado = document.createElement("option");
+sabado.value="sab";
+let contSabado = document.createTextNode("SÁBADO");
+sabado.appendChild(contSabado);
+
+let domingo = document.createElement("option");
+domingo.value="dom";
+let contDomingo = document.createTextNode("DOMINGO");
+domingo.appendChild(contDomingo);
+
+/* Inserto los campos del select */
 fieldset.appendChild(dia);
+dia.appendChild(elegirDia);
+elegirDia.appendChild(viernes);
+elegirDia.appendChild(sabado);
+elegirDia.appendChild(domingo);
 
 
-console.log(form);
+
+
 
 }
