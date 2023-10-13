@@ -1,0 +1,18 @@
+body{
+    background-color: firebrick;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+form{
+    background-image: url("img2/pizzeria.jpg");
+    background-size: cover;
+}
+
+#enviar{
+    background-color: firebrick;
+    color: white;
+    font-size: 16px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="indexJs2.js"></script>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div>
+        <form action="procesar.jsp" method="get">
+            <fieldset>
+                <legend> Pizzeria  Locomia</legend>
+                <label for ="nombre">Nombre: </label>
+                <input id="nombre" name="nombre" type="text" placeholder="Introduce tu nombre" required/>
+                </br>
+                <label for ="direccion">Dirección: </label>
+                <input id="direccion" name="direccion" type="text" placeholder="Introduce tu direccion" required/>
+                </br>
+                <label for ="telefono">Teléfono: </label>
+                <input id="telefono" name="telefono" type="tel" placeholder="Introduce tu telefono" required/>
+                </br>
+                <label for ="email">Email: </label>
+                <input id="email" name="email" type="email" placeholder="Introduce tus apellidos" required/>
+                </br></br>
+                <label for="tamaño" >Elige tu tamaño: </label>
+                </br>
+                <label>Pequeña (20cm)</label>
+                <input name="tamaño" type="radio" value="p"/>
+                </br>
+                <label>Mediana (25cm)</label>
+                <input name="tamaño" type="radio" value="m"/>
+                </br>
+                <label>Familiar (33cm)</label>
+                <input name="tamaño" type="radio" value="g"/>
+                </br></br>
+                <label for="pizzas">Elige tus ingredientes: 
+                    <br> *(Todas las pizzas vienen acompañadas de queso, cebolla y pimiento)
+                </label>
+                </br>
+                <label>Bacon</label>
+                <input name ="bacon" type="checkbox" value="bacon" checked/>
+                </br>
+                <label>Carne picada</label>
+                <input name ="carne" type="checkbox" value="quesos" alt="carne"/>
+                </br>
+                <label>Pollo</label>
+                <input name ="pollo" type="checkbox" value="hawaiana" alt="pollo"/>
+                </br>
+                <label>Pepperoni</label>
+                <input name ="peperoni" type="checkbox" value="peperoni" alt="pepperoni"/>
+                </br></br>
+                <input type="submit" value="Enviar" id="enviar"/>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
