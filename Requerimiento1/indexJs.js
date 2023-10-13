@@ -45,20 +45,20 @@ form.appendChild(fieldset);
 //DNI
 let labelDni = document.createElement("label"); //<label></label>
 labelDni.for = "dni"; // <label for="dni"></label>
-let contDni = document.createTextNode("DNI (con letra): "); //DNI (con letra): 
+let contDni = document.createTextNode("DNI (con letra)* : "); //DNI (con letra): 
 labelDni.appendChild(contDni); // <label for="dni">DNI: </label>
 
 let inputDni = document.createElement("input"); //<input></input>
-inputDni.setAttribute = ("id", "dni"); //<input id="dni"></input>
-inputDni.setAttribute = ("name","dni"); //<input id="dni" name="dni"></input>
-inputDni.setAttribute = ("type","text"); //<input id="dni" name="dni" type="text"></input>
+inputDni.id = "dni"; //<input id="dni"></input>
+inputDni.name = "dni"; //<input id="dni" name="dni"></input>
+inputDni.type = "text" ;//<input id="dni" name="dni" type="text"></input>
 inputDni.placeholder = ("Introduce tu DNI"); //<input id="dni" type="text" name="dni" placeholder="Introduce tu dni"></input>
 inputDni.required = "true";
 
 //Nombre
 let labelNombre = document.createElement("label"); //<label></label>
 labelNombre.for = "nombre"; //<label for="nombre"></label>
-let contNombre = document.createTextNode("Nombre: "); //<label for="nombre">Nombre: </label>
+let contNombre = document.createTextNode("Nombre : "); //<label for="nombre">Nombre: </label>
 labelNombre.appendChild(contNombre);
 
 let inputNombre = document.createElement("input"); //<input></input>
@@ -70,7 +70,7 @@ inputNombre.placeholder = "Escribe tu nombre"; //<input id="nombre" name="name" 
 //Apellidos
 let labelApellidos = document.createElement("label");
 labelApellidos.for = "apellidos";
-let contApellidos = document.createTextNode("Apellidos: ");
+let contApellidos = document.createTextNode("Apellidos : ");
 labelApellidos.appendChild(contApellidos);
 
 let inputApellidos = document.createElement("input");
@@ -82,7 +82,7 @@ inputApellidos.placeholder = "Escribe tus apellidos";
 //Direccion
 let labelDireccion = document.createElement("label");
 labelDireccion.for = "Direccion";
-let contDireccion = document.createTextNode("Dirección: ")
+let contDireccion = document.createTextNode("Dirección : ")
 labelDireccion.appendChild(contDireccion);
 
 let inputDireccion = document.createElement("input");
@@ -94,7 +94,7 @@ inputDireccion.placeholder = "Escribe tu dirección"
 //Telefono
 let labelTelefono = document.createElement("label");
 labelTelefono.for = "telefono";
-let contTelefono = document.createTextNode("Teléfono: ")
+let contTelefono = document.createTextNode("Teléfono : ")
 labelTelefono.appendChild(contTelefono);
 
 let inputTelefono = document.createElement("input");
@@ -156,31 +156,31 @@ l10.appendChild(inputJugadores10);
 /* Creo las imagenes */
 let imgTerror = document.createElement("img");
 imgTerror.src = "img/terror.png";
-imgTerror.style.width = "10%";
+imgTerror.style.width = "12%";
 imgTerror.title = "Experiencia terror"
 imgTerror.alt = "Experiencia terror";
 
 let imgAccion = document.createElement("img");
 imgAccion.src = "img/accion.png";
-imgAccion.style.width = "10%";
+imgAccion.style.width = "12%";
 imgAccion.title = "Experiencia acción";
 imgAccion.alt = "Experiencia acción";
 
 let imgFantasia = document.createElement("img");
 imgFantasia.src = "img/fantasia.png";
-imgFantasia.style.width = "10%";
+imgFantasia.style.width = "12%";
 imgFantasia.title = "Experiencia fantasia";
 imgFantasia.alt = "Experiencia fantasia";
 
 let imgAventura = document.createElement("img");
 imgAventura.src = "img/aventura.png";
-imgAventura.style.width = "10%";
+imgAventura.style.width = "12%";
 imgAventura.title = "Experiencia aventura";
 imgAventura.alt = "Experiencia aventura";
 
 let imgInfantil = document.createElement("img");
 imgInfantil.src = "img/infantil.png";
-imgInfantil.style.width = "10%";
+imgInfantil.style.width = "12%";
 imgInfantil.title = "Experiencia infantil";
 imgInfantil.alt = "Experiencia infantil";
 
@@ -261,11 +261,11 @@ for (let check of experiencia){
     if (check.nombre == "Terror"){
         nombreCheck.style.paddingLeft = "3.8%"; 
     }else if(check.nombre == "Accion"){
-        nombreCheck.style.paddingLeft = "6.2%";  
+        nombreCheck.style.paddingLeft = "7%";  
     }else if(check.nombre == "Fantasia"){
         nombreCheck.style.paddingLeft = "6.5%";  
     }else if(check.nombre == "Aventura"){
-        nombreCheck.style.paddingLeft = "5.5%";  
+        nombreCheck.style.paddingLeft = "6%";  
     }else if(check.nombre == "Infantil"){
         nombreCheck.style.paddingLeft = "6%";  
     }
@@ -330,6 +330,7 @@ obs.name = "obs";
 obs.placeholder = "Observaciones";
 obs.rows ="4";
 obs.cols = "35";
+obs.id = "obs";
 
 /*Inserto el textarea en el formulario */
 fieldset.appendChild(observaciones);

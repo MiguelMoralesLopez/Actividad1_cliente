@@ -1,0 +1,27 @@
+body{
+    background-color: cadetblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
+    color:whitesmoke;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+#dni{
+    margin-left: 5px;
+}
+#nombre{
+    margin-left: 5px;
+}
+#apellidos{
+    margin-left: 5px;
+}
+#direccion{
+    margin-left: 5px;
+}
+#telefono{
+    margin-left: 5px;
+}
+#obs{
+    margin-left: 5px;
+}
