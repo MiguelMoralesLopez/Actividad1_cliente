@@ -36,7 +36,7 @@ form.setAttribute = ("method","post"); //<form action="procesar.jsp" method="pos
 
 let fieldset = document.createElement("fieldset"); //<fieldset></fieldset>
 let legend = document.createElement("legend"); //<legend></legend>
-let contenidoLegend = document.createTextNode("Formulario"); //Formulario
+let contenidoLegend = document.createTextNode("Reserva ya tu experiencia"); //Formulario
 fieldset.appendChild(legend);
 legend.appendChild(contenidoLegend);
 form.appendChild(fieldset);
@@ -244,46 +244,6 @@ labelJugadores.appendChild(l6);
 l6.appendChild(br17);
 labelJugadores.appendChild(l10);
 fieldset.appendChild(br7);
-fieldset.appendChild(labelExperiencia);
-fieldset.appendChild(br8);
-
-/* Introduzco las fotos en el formulario*/
-fieldset.appendChild(imgTerror);
-fieldset.appendChild(imgAccion);
-fieldset.appendChild(imgFantasia);
-fieldset.appendChild(imgAventura);
-fieldset.appendChild(imgInfantil);
-fieldset.appendChild(brFotos);
-
-/* Creo un for para introducir todos los checkbox*/
-for (let check of experiencia){
-    let nombreCheck = document.createElement("span");
-    if (check.nombre == "Terror"){
-        nombreCheck.style.paddingLeft = "3.8%"; 
-    }else if(check.nombre == "Accion"){
-        nombreCheck.style.paddingLeft = "7%";  
-    }else if(check.nombre == "Fantasia"){
-        nombreCheck.style.paddingLeft = "6.5%";  
-    }else if(check.nombre == "Aventura"){
-        nombreCheck.style.paddingLeft = "6%";  
-    }else if(check.nombre == "Infantil"){
-        nombreCheck.style.paddingLeft = "6%";  
-    }
-    
-    let contNombreCheck = document.createTextNode(check.nombre);
-    nombreCheck.appendChild(contNombreCheck);
-    fieldset.appendChild(nombreCheck);
-
-    let checkboxExperiencia = document.createElement("input");
-    checkboxExperiencia.type = "checkbox";
-    checkboxExperiencia.name = check.nombre;
-    checkboxExperiencia.value = check.value;
-    fieldset.appendChild(checkboxExperiencia);
-
-    if(check.nombre == "Infantil")
-        fieldset.appendChild(br18);
-        fieldset.appendChild(br19);
-}
 
 /* Creo los select*/
 let dia = document.createElement("label");
@@ -309,7 +269,7 @@ domingo.value="dom";
 let contDomingo = document.createTextNode("DOMINGO");
 domingo.appendChild(contDomingo);
 
-/* Inserto los campos del select */
+/* Inserto los campos del select y el laber del titulo de las experiencias*/
 fieldset.appendChild(dia);
 dia.appendChild(elegirDia);
 elegirDia.appendChild(viernes);
@@ -317,6 +277,53 @@ elegirDia.appendChild(sabado);
 elegirDia.appendChild(domingo);
 fieldset.appendChild(br20);
 fieldset.appendChild(br21);
+fieldset.appendChild(labelExperiencia);
+fieldset.appendChild(br8);
+
+/* Introduzco las fotos en el formulario*/
+fieldset.appendChild(imgTerror);
+fieldset.appendChild(imgAccion);
+fieldset.appendChild(imgFantasia);
+fieldset.appendChild(imgAventura);
+fieldset.appendChild(imgInfantil);
+fieldset.appendChild(brFotos);
+
+/* Creo un for para introducir todos los checkbox*/
+for (let check of experiencia){
+    let nombreCheck = document.createElement("span");
+    if (check.nombre == "Terror"){
+        nombreCheck.style.paddingLeft = "3.8%"; 
+        nombreCheck.style.fontFamily ="impact";
+    }else if(check.nombre == "Accion"){
+        nombreCheck.style.paddingLeft = "7%"; 
+        nombreCheck.style.fontFamily ="impact";
+    }else if(check.nombre == "Fantasia"){
+        nombreCheck.style.paddingLeft = "6.5%"; 
+        nombreCheck.style.fontFamily ="impact"; 
+    }else if(check.nombre == "Aventura"){
+        nombreCheck.style.paddingLeft = "6%"; 
+        nombreCheck.style.fontFamily ="impact"; 
+    }else if(check.nombre == "Infantil"){
+        nombreCheck.style.paddingLeft = "6.4%";
+        nombreCheck.style.fontFamily ="impact";
+    }
+    
+    let contNombreCheck = document.createTextNode(check.nombre);
+    nombreCheck.appendChild(contNombreCheck);
+    fieldset.appendChild(nombreCheck);
+
+    let checkboxExperiencia = document.createElement("input");
+    checkboxExperiencia.type = "checkbox";
+    checkboxExperiencia.name = check.nombre;
+    checkboxExperiencia.value = check.value;
+    fieldset.appendChild(checkboxExperiencia);
+
+    if(check.nombre == "Infantil")
+        fieldset.appendChild(br18);
+        fieldset.appendChild(br19);
+}
+
+
 
 /* Creación del textarea */
 
@@ -342,7 +349,7 @@ observaciones.appendChild(br23);
 let enviar = document.createElement("input");
 enviar.type = "submit";
 enviar.value = "Enviar";
-enviar.style.marginLeft= "7%";
+enviar.style.marginLeft= "12%";
 enviar.style.marginRight= "1%";
 
 let restablecer = document.createElement("input");
@@ -358,3 +365,6 @@ fieldset.appendChild(restablecer);
 document.getElementById("contenedor").appendChild(form); //<body><div id="contenedor"><form> ... </form></div></body>
 
 }
+
+// Hacer que al cargarse la pagina se use la funcion cargarDatos
+window.onload = cargarDatos;
