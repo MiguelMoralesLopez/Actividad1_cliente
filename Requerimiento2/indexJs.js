@@ -1,4 +1,3 @@
-let precioTotal = 0;
 
 function calcularPrecio(){
     validarFormulario()
@@ -8,7 +7,8 @@ function calcularPrecio(){
     
     let ing = 0
     ing = comprobarIngredientes()
-
+    
+    let precioTotal = 0;
     precioTotal = size + ing;
     console.log(precioTotal)
 
