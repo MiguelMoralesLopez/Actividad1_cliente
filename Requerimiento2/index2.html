@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <form action="procesar.jsp" method="get">
+        <form action="procesar.jsp" method="post">
             <fieldset>
                 <legend> Pizzeria  Locomia</legend>
                 <label for ="nombre">Nombre: </label>
@@ -24,34 +24,34 @@
                 <label for ="email">Email: </label>
                 <input id="email" name="email" type="email" placeholder="Introduce tus apellidos" required/>
                 </br></br>
-                <label for="tamaño" >Elige tu tamaño: </label>
+                <label for="tamaño" id="tamaño">Elige tu tamaño: </label>
                 </br>
                 <label>Pequeña (20cm)</label>
-                <input name="tamaño" type="radio" value="p"/>
+                <input name="tamaño" type="radio" value="p" id="pequeña" checked="checked"/>
                 </br>
                 <label>Mediana (25cm)</label>
-                <input name="tamaño" type="radio" value="m"/>
+                <input name="tamaño" type="radio" value="m" id="mediana"/>
                 </br>
                 <label>Familiar (33cm)</label>
-                <input name="tamaño" type="radio" value="g"/>
+                <input name="tamaño" type="radio" value="g" id="grande"/>
                 </br></br>
                 <label for="pizzas">Elige tus ingredientes: 
                     <br> *(Todas las pizzas vienen acompañadas de queso, cebolla y pimiento)
                 </label>
                 </br>
                 <label>Bacon</label>
-                <input name ="bacon" type="checkbox" value="bacon" checked/>
+                <input name = "ingrediente" id ="bacon" type="checkbox" value="bacon"/>
                 </br>
                 <label>Carne picada</label>
-                <input name ="carne" type="checkbox" value="quesos" alt="carne"/>
+                <input name = "ingrediente" id ="carne" type="checkbox" value="quesos" alt="carne"/>
                 </br>
                 <label>Pollo</label>
-                <input name ="pollo" type="checkbox" value="hawaiana" alt="pollo"/>
+                <input name = "ingrediente" id ="pollo" type="checkbox" value="hawaiana" alt="pollo"/>
                 </br>
                 <label>Pepperoni</label>
-                <input name ="peperoni" type="checkbox" value="peperoni" alt="pepperoni"/>
+                <input name = "ingrediente" id ="peperoni" type="checkbox" value="peperoni" alt="pepperoni"/>
                 </br></br>
-                <input type="submit" value="Enviar" id="enviar"/>
+                <button type="submit" value="Procesar pedido" id="procesar">PROCESAR PEDIDO</button> <!--button con funcion procesar dentro de el -->
             </fieldset>
         </form>
     </div>
