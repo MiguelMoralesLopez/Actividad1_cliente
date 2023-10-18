@@ -2,10 +2,10 @@ window.onload = function () {
 
     //FUNCIONES
 
-    function pizzaChecked(){
+    function pizzaChecked() {
         tamañoPizza = document.getElementsByName("tamaño");
         var seleccionado = false;
-        for(var i = 0; i < tamañoPizza.lenght; i++){
+        for(var i=0; i<tamañoPizza.length; i++) {
             if(tamañoPizza[i].checked){
                 seleccionado = true;
                 break;
@@ -13,6 +13,7 @@ window.onload = function () {
         }
         alert("Mandamos el formulario!")
         return true;
+        
     }
 
 
@@ -22,15 +23,14 @@ window.onload = function () {
         let mediana = document.getElementById(mediana)
         let grande = document.getElementById(grande)
 
-        if (pequeña && pizzaChecked) {
+        if (pequeña.checked) {
             precioPizza = 5
-        } else if (mediana && pizzaChecked) {
+        } else if (mediana.checked) {
             precioPizza = 10
-        } else if (grande && pizzaChecked) {
+        } else if (grande.checked) {
             precioPizza = 15
         }
-        
-        console.log(precioPizza)
+        return precioPizza;
     }
 
 
@@ -46,6 +46,10 @@ window.onload = function () {
 
     //funcion procesar
     function procesarPedido() {
+
+        if(document.getElementsById("procesar").onclick){
+            return "el precio es" + calcPrecioPizza()
+        }
         //crear variables con cada return de las funciones del precio
         //crear la variable que se retorna con el precio total de ambas
         //mostrar la variable por pantalla  -- buscar forma de borrar info previa para que no se acumulen los precios anteriores(aparece en los apuntes de felix)
