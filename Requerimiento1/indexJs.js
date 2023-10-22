@@ -217,7 +217,7 @@ function cargarDatos() {
             nombre: "Infantil",
             value: "infantil",
             name: "exp",
-            id : "infantil"
+            id: "infantil"
         }
     ]
 
@@ -333,10 +333,7 @@ function cargarDatos() {
         fieldset.appendChild(br19);
     }
 
-
-
     /* Creación del textarea */
-
     let observaciones = document.createElement("label");
     observaciones.for = "obs";
     let contObs = document.createTextNode("Observaciones: ");
@@ -373,7 +370,6 @@ function cargarDatos() {
 
     /* Introduzco el formulario en el div del html*/
     document.getElementById("contenedor").appendChild(form); //<body><div id="contenedor"><form> ... </form></div></body>
-
 }
 
 // Hacer que al cargarse la pagina se use la funcion cargarDatos

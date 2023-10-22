@@ -14,9 +14,7 @@ function pizzaChecked() {
         alert('[ERROR] Debe seleccionar uno');
         return false;
     }
-
     return true;
-
 }
 
 //funcion calcular precio tamaño
@@ -33,8 +31,6 @@ function calcPrecioTam() {
         return precioPizza;
     }
 }
-
-
 
 //funcion ingredientes
 function calcPrecioIngrediente() {
@@ -58,7 +54,6 @@ function calcPrecioIngrediente() {
     }
 }
 
-
 //funcion procesar
 function procesarPedido() {
     precio.parentNode.removeChild(precio)
@@ -73,10 +68,4 @@ function procesarPedido() {
     nuevoPrecio.appendChild(precioTotal)
     nuevoPrecio.id = "precio"
     formulario.appendChild(nuevoPrecio)
-
-    //crear variables con cada return de las funciones del precio
-    //crear la variable que se retorna con el precio total de ambas
-    //mostrar la variable por pantalla  -- buscar forma de borrar info previa para que no se acumulen los precios anteriores(aparece en los apuntes de felix)
-
 }
-
