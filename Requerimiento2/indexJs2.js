@@ -1,28 +1,28 @@
-window.onload = function () {
+//FUNCIONES
 
-    //FUNCIONES
-
-    function pizzaChecked() {
-        tamañoPizza = document.getElementsByName("tamaño");
-        var seleccionado = false;
-        for(var i=0; i<tamañoPizza.length; i++) {
-            if(tamañoPizza[i].checked){
-                seleccionado = true;
-                break;
-            } 
+//funcion validar si esta checked
+function pizzaChecked() {
+    tamañoPizza = document.getElementsByName("tamaño");
+    var seleccionado = false;
+    for (var i = 0; i < tamañoPizza.length; i++) {
+        if (tamañoPizza[i].checked) {
+            seleccionado = true;
+            break;
         }
-        alert("Mandamos el formulario!")
-        return true;
-        
+    }
+    if (!seleccionado) {
+        alert('[ERROR] Debe seleccionar uno');
+        return false;
     }
 
+    return true;
 
-    function calcPrecioPizza() {
-        let precioPizza = 0;
-        let pequeña = document.getElementById(pequeña)
-        let mediana = document.getElementById(mediana)
-        let grande = document.getElementById(grande)
+}
 
+//funcion calcular precio tamaño
+function calcPrecioTam() {
+    let precioPizza = 0;
+    if (pizzaChecked()) {
         if (pequeña.checked) {
             precioPizza = 5
         } else if (mediana.checked) {
@@ -32,32 +32,51 @@ window.onload = function () {
         }
         return precioPizza;
     }
-
-
-    //funcion ingredientes
-    function calcPrecioIngrediente() {
-
-    }
-
-    //funcion validar formulario -- 1ingr. 1 pizza, todo relleno
-    function validarForm() {
-
-    }
-
-    //funcion procesar
-    function procesarPedido() {
-
-        if(document.getElementsById("procesar").onclick){
-            return "el precio es" + calcPrecioPizza()
-        }
-        //crear variables con cada return de las funciones del precio
-        //crear la variable que se retorna con el precio total de ambas
-        //mostrar la variable por pantalla  -- buscar forma de borrar info previa para que no se acumulen los precios anteriores(aparece en los apuntes de felix)
-
-    }
-
 }
 
 
 
+//funcion ingredientes
+function calcPrecioIngrediente() {
+    let contador = 0
+    
+    if(pizzaChecked()){
+        if (bacon.checked){
+            contador++
+        }
+        if (carne.checked){
+            contador++
+        }
+        if (pollo.checked){
+            contador++
+        }
+        if (peperoni.checked){
+            contador++
+        }
+        let precioIngredientes = contador++
+        return precioIngredientes;
+    }
+}
+
+
+//funcion procesar
+function procesarPedido() {
+    precio.parentNode.removeChild(precio)
+
+    let precioTamPizza = 0
+    precioTamPizza = calcPrecioTam();
+    let precioIngre = 0
+    precioIngre = calcPrecioIngrediente();
+
+    let precioTotal = document.createTextNode("Precio total: " + (precioTamPizza+precioIngre))
+    let nuevoPrecio = document. createElement("p")
+    nuevoPrecio.appendChild(precioTotal)
+    nuevoPrecio.id = "precio"
+    formulario.appendChild(nuevoPrecio)
+
+    //crear variables con cada return de las funciones del precio
+    //crear la variable que se retorna con el precio total de ambas
+    //mostrar la variable por pantalla  -- buscar forma de borrar info previa para que no se acumulen los precios anteriores(aparece en los apuntes de felix)
+
+}
 

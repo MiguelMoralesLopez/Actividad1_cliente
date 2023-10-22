@@ -10,7 +10,7 @@
 <body>
     <div>
         <form action="procesar.jsp" method="post">
-            <fieldset>
+            <fieldset id="formulario">
                 <legend> Pizzeria  Locomia</legend>
                 <label for ="nombre">Nombre: </label>
                 <input id="nombre" name="nombre" type="text" placeholder="Introduce tu nombre" required/>
@@ -27,7 +27,7 @@
                 <label for="tamaño" id="tamaño">Elige tu tamaño: </label>
                 </br>
                 <label>Pequeña (20cm)</label>
-                <input name="tamaño" type="radio" value="p" id="pequeña" checked="checked"/>
+                <input name="tamaño" type="radio" value="p" id="pequeña"/>
                 </br>
                 <label>Mediana (25cm)</label>
                 <input name="tamaño" type="radio" value="m" id="mediana"/>
@@ -51,7 +51,8 @@
                 <label>Pepperoni</label>
                 <input name = "ingrediente" id ="peperoni" type="checkbox" value="peperoni" alt="pepperoni"/>
                 </br></br>
-                <button type="text" value="procesarPedido" id="procesar">PROCESAR PEDIDO</button> <!--button con funcion procesar dentro de el -->
+                <button type="button" id="procesar" onclick="procesarPedido()">PROCESAR PEDIDO</button> <!--button con funcion procesar dentro de el -->
+                <p id="precio">Precio total: </p>
             </fieldset>
         </form>
     </div>
