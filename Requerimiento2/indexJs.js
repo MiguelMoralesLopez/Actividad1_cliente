@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function () {
 
 function calcularPrecio(){
     //validarFormulario()
@@ -59,3 +59,7 @@ function validarFormulario(){
             alert('Debes seleccionar al menos un ingrediente.');
     
 }
+
+let calcularPrecioButton = document.querySelector("button[type='button']");
+  calcularPrecioButton.addEventListener("click", calcularPrecio);
+});
