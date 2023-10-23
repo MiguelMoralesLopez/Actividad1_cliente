@@ -1,3 +1,5 @@
+contenedor.onload = crearNodos();
+
 function crearNodos(){
 
     //Creación del título de página
@@ -17,7 +19,6 @@ function crearNodos(){
     document.getElementById("contenedor").appendChild(formulario);
 
     //Campos de texto a crear: DNI, nombre, apellidos, dirección y teléfono
-
     let camposTexto = [
         {   for: 'dni',
             nombrelabel: 'DNI: ',
@@ -52,7 +53,7 @@ function crearNodos(){
         {
             for: 'telefono',
             nombrelabel: ' Teléfono: ',
-            type: 'text',
+            type: 'tel',
             id: 'telefono',
             nombre: 'telefono',
             placeholder: 'Introduce tu teléfono'

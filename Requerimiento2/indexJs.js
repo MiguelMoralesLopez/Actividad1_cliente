@@ -1,6 +1,7 @@
 
+
 function calcularPrecio(){
-    validarFormulario()
+    //validarFormulario()
     precio.parentNode.removeChild(precio);
     let size = 0
     size = comprobarSize()
@@ -17,17 +18,18 @@ function calcularPrecio(){
     let nuevoP = document.createElement("p")
     nuevoP.appendChild(nuevoPrecio)
     nuevoP.id = "precio"
-    formulario.appendChild(nuevoP)
+    field.appendChild(nuevoP)
 }
 
 function comprobarSize(){
     let precioSize = 0;
-    if(document.getElementById("peq").checked)
-        precioSize = 5
-    else if(document.getElementById("med").checked)
-        precioSize = 10
-    else if(document.getElementById("grande").checked)
+    if(document.getElementById("peq").checked){
+        precioSize = 5}
+    else if(document.getElementById("med").checked){
+        precioSize = 10}
+    else if(document.getElementById("grande").checked){
         precioSize = 15
+}
 
     return precioSize
 }
@@ -48,16 +50,7 @@ function comprobarIngredientes(){
 }
 
 function validarFormulario(){
-    if (nombre.value == null || nombre.value == "")
-        alert('Introduce tu nombre')
-    if (apellidos.value == null || apellidos.value == "")
-        alert('Introduce tus apellidos')
-    if (direccion.value == null || direccion.value == "")
-        alert('Introduce tu dirección')
-    if (tlf.value == null || tlf.value == "")
-        alert('Introduce tu teléfono')
-    if (email.value == null || email.value == "")
-        alert('Introduce tu email')
+
     if((document.getElementById("peq").checked == false) && (document.getElementById("med").checked == false)
         && (document.getElementById("grande").checked == false))
             alert('Debes elegir un tamaño para la pizza')
@@ -66,4 +59,3 @@ function validarFormulario(){
             alert('Debes seleccionar al menos un ingrediente.');
     
 }
-

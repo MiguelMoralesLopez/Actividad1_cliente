@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="indexJs.js"></script>
+    <script type="text/javascript" src="indexJs.js" defer></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form>
-        <fieldset id = formulario>
+    <form id="form">
+        <fieldset id = field>
             <legend>
                 Formulario de pedido
             </legend>
@@ -43,7 +43,7 @@
             <label for="huevo">Huevo</label>
             <br/>
             <br/>
-            <button type="button" onclick="calcularPrecio()">Procesar pedido</button>
+            <input type="submit" id="procesarPedido" >
             <p id="precio">Precio total: </p>
 
 
