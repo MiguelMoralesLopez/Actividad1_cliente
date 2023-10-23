@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizzas Cucurulo</title>
+    <script type="text/javascript" src="scriptJs.js"></script>
+    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
+    <h1>******************Gestión del pedido******************</h1><br>
+    <h2>Introduzca sus datos</h2>
+    <div class ="caja">
     
+        <form id="form">
+
+            <label for="nombre">Nombre</label> <br/>
+            <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" >
+            <br/>
+
+            <label for="direccion">Dirección</label><br/>
+            <input type="text" id="direccion" name="direccion" placeholder="Escriba su Dirección" required >
+            <br>
+
+            <label for="telefono">Teléfono</label><br/>
+            <input type="text" id="telefono" name="telefono" placeholder="Escriba el Teléfono" required >
+            <br>
+
+            <label for="email">Email</label><br/>
+            <input type="text" id="email" name="email" placeholder="Escriba su Email" >
+            <br><br>
+    
+        
+        <h3>Eliga el tamaño de la pizza</h3><br>
+
+            <img src="img2/peque.png" alt="pizzaPeque" width="80">
+            <label for="peque">Pequeña: 5€</label>
+            <input type="radio" name="masa" id="peque" value="5" required>
+            
+            <img src="img2/mediana.png" alt="pizzaMedia" width="80">
+            <label for="mediana">Mediana 10€</label>
+            <input type="radio" name="masa" id="mediana" value="10" required>
+            
+            <img src="img2/grande.png" alt="pizzaGrande" width="80">
+            <label for="grande">Grande 15€</label>
+            <input type="radio" name="masa" id="grande"value="15" required>
+            <br><br>
+
+        <h4>Añade tus ingredientes preferidos por "1€"</h4><br>
+
+            <img src="img2/tomate.png" alt="tomate" width="45">
+            <input type="checkbox" name="ingrediente" id="tomate" value="1">
+            <label for="tomate">Nuestra salsa </label>
+
+            <img src="img2/pollo.png" alt="Pollo" width="55">
+            <input type="checkbox" name="ingrediente" id="pollo" value="1">
+            <label for="pollo">Pollo Mex</label>
+
+            <img src="img2/bacon.png" alt="bacon" width="30">
+            <input type="checkbox" name="ingrediente" id="bacon" value="1">
+            <label for="bacon">Bacon ahumado</label>
+
+            <img src="img2/queso.png" alt="queso" width="40">
+            <input type="checkbox" name="ingrediente" id="queso" value="1">
+            <label for="queso">Queso</label>
+            <br><br> <br><br>
+
+            <button class="boton1" type ="button" onclick="calcularPrecioTotal()">Realizar pedido</button>
+            
+        </form>
+            <div>
+                <p id="resultado"></p>
+            </div>
+
+    </div>
+   
 </body>
 </html>
