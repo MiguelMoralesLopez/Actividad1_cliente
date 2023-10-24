@@ -1,9 +1,9 @@
 
     /*Funcion validarDatos
-        Método para validar los campos de datos (nombre,direccion,telefono, email)
-        Evalua  por cada campo nombre, direccion, telefono y email que exista algun caracter
-        Si es correcto la validacion prosigue y continua con el formulario
-        Si es falso; return un mensaje obligando a rellenar los campos.
+            Método para validar los campos de datos (nombre,direccion,telefono, email)
+            Evalua  por cada campo nombre, direccion, telefono y email que exista algun caracter
+            Si es correcto la validacion prosigue y continua con el formulario
+            Si es falso; return un mensaje obligando a rellenar los campos.
          */
  
        function validarDatos() {
@@ -43,14 +43,15 @@
                       el valor de la misma.
             El Objetivo: Obtener precio total del encargo tanto de la seleccion pizza como los respectivos
                       ingredientes.
-         -pizzas: Variable recibe dato desde la opcion elegida.
-         -pizzaElegida: Variable creada, recibe el valor de la pizza elegida
-                       Se transforma a entero porque el venia con valor "String"
-         - ingredientes: Variable que recibe valor desde los checks propuestos
-         - ingredienteElegido : Variable que tras iterar añadirá el elemento en un Array
-         - ingredientePrecio : Variable con el valor y parseada a entero al venir como "String"
-         - precioTotal : Resultado de la obtencion de la pizza eleguida mas los ingredientes seleccionados
-         - resultado: Variable creada para mostrar en pantalla, pizza elegida, precio pizza,numero de ingredientes
+
+                    -pizzas: Variable recibe dato desde la opcion elegida.
+                    -pizzaElegida: Variable creada, recibe el valor de la pizza elegida
+                                   Se transforma a entero porque el venia con valor "String"
+                    - ingredientes: Variable que recibe valor desde los checks propuestos
+                    - ingredienteElegido : Variable que tras iterar añadirá el elemento en un Array
+                    - ingredientePrecio : Variable con el valor y parseada a entero al venir como "String"
+                    - precioTotal : Resultado de la obtencion de la pizza eleguida mas los ingredientes seleccionados
+                    - resultado: Variable creada para mostrar en pantalla, pizza elegida, precio pizza,numero de ingredientes
                       y la suma final
         */ 
 
