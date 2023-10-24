@@ -69,3 +69,4 @@ function procesarPedido() {
     nuevoPrecio.id = "precio"
     formulario.appendChild(nuevoPrecio)
 }
+
