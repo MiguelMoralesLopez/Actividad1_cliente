@@ -13,6 +13,8 @@ function crearNodos(){
     //Creamos un formulario
     let formulario = document.createElement('form')
     formulario.id = 'formulario'
+    formulario.method = 'get'
+    formulario.action = 'insertar.php'
     document.getElementById('contenedor').appendChild(formulario)
     
     //Creamos una leyenda para el formulario
@@ -87,6 +89,7 @@ function crearNodos(){
         input.type = campo.type
         input.name = campo.name
         input.id = campo.id
+        input.required = 'true'
         input.placeholder = campo.placeholder
         input.required = 'true'
         formulario.appendChild(label)

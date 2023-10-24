@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script type="text/javascript" src="indexJs.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Página para pedir pizza</title>
 </head>
-<body onload="crearNodos()">
-    <div id="contenedor"></div>
+<body>
+    <div id="contenedor">
+        <h1>Pizzerias Wayne</h1>
+        <form>
+            <fieldset id="datos">
+                <legend>Introduce tus datos</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre"  placeholder="Introduce tu nombre">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos"  placeholder="Introduce tus apellidos">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono"  placeholder="Introduce tu telefono">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Introduce tu email" autocomplete="email">
+
+            </fieldset>
+            <fieldset id ="pizza">
+                <legend>Elige su pizza</legend>
+                
+                    <h3>Elige el tamaño</h3>
+                    <label for="peque">Pequeño</label>
+                    <input type="radio" name="tamano" id="peque">
+                    <label for="mediano">Mediano</label>
+                    <input type="radio" name="tamano" id="mediano" checked="true">
+                    <label for="grande">Grande</label>
+                    <input type="radio" name="tamano" id="grande">
+
+                    <h3>Elija sus ingredientes</h3>
+                    <label for="pina">Piña</label>
+                    <input type="checkbox" name="pina" id="pina">
+                    <label for="jamon">Jamon</label>
+                    <input type="checkbox" name="jamon" id="jamon">
+                    <label for="bacon">Bacon</label>
+                    <input type="checkbox" name="bacon" id="bacon">
+                    <label for="queso">Queso</label>
+                    <input type="checkbox" name="queso" id="queso">
+
+                    <br/>
+                    <br/>
+                    <button onclick="comprobarCampos()">Procesar pedido</button>
+
+
+            </fieldset>
+
+
+        </form>
+    </div>
     
 </body>
 </html>
