@@ -103,7 +103,7 @@ function cargarDatos() {
     inputTelefono.type = "tel";
     inputTelefono.placeholder = "Escribe tu número de teléfono"
 
-    /* Creo los campos radio que usaré en el formulario */
+    /* Creo los radio button de jugadores */
     let labelJugadores = document.createElement("label");
     labelJugadores.for = "jugadores";
     let contJugadores = document.createTextNode("Número de jugadores: ");
@@ -333,6 +333,59 @@ function cargarDatos() {
         fieldset.appendChild(br19);
     }
 
+    /* Creación de radio button dificultad */
+    let labelDificultad = document.createElement("label");
+    let lDifCont = document.createTextNode("Escoge la dificultad : ")
+    labelDificultad.appendChild(lDifCont);
+    fieldset.appendChild(labelDificultad);
+
+    let dificultad = [
+        {
+            nombre : "Baja",
+            id : "baja",
+            name : "dificult",
+            type : "radio",
+            value : "b"
+        },
+        {
+            nombre : "Media",
+            id : "media",
+            name : "dificult",
+            type : "radio",
+            value : "m"
+        },
+        {
+            nombre : "Alta",
+            id : "alta",
+            name : "dificult",
+            type : "radio",
+            value : "a"
+        },
+        {
+            nombre : "Extrema",
+            id : "extrema",
+            name : "dificult",
+            type : "radio",
+            value : "e"
+        }
+    ]
+
+    for (let dif of dificultad){
+        let labelDif = document.createElement("label")
+        let nombreDif = document.createTextNode(dif.nombre)
+        nombreDif.type = "text"
+        labelDif.style.paddingLeft = "1%"
+        fieldset.appendChild(labelDif)
+        labelDif.appendChild(nombreDif)
+        let inputDif = document.createElement("input")
+        labelDif.appendChild(inputDif)
+        inputDif.type = dif.type
+        inputDif.name = dif.name
+        inputDif.id = dif.id
+        inputDif.value = dif.value
+    }
+    
+
     /* Creación del textarea */
     let observaciones = document.createElement("label");
     observaciones.for = "obs";
@@ -347,6 +400,8 @@ function cargarDatos() {
     obs.id = "obs";
 
     /*Inserto el textarea en el formulario */
+    fieldset.appendChild(br24);
+    fieldset.appendChild(br25)
     fieldset.appendChild(observaciones);
     observaciones.appendChild(obs);
     observaciones.appendChild(br22);
