@@ -53,6 +53,7 @@ function cargarDatos() {
     inputDni.name = "dni"; //<input id="dni" name="dni"></input>
     inputDni.type = "text"; //<input id="dni" name="dni" type="text"></input>
     inputDni.placeholder = ("Introduce tu DNI"); //<input id="dni" type="text" name="dni" placeholder="Introduce tu dni"></input>
+    inputDni.style.background = "#EAF9FD";
     inputDni.required = "true";
 
     //Nombre
@@ -66,6 +67,7 @@ function cargarDatos() {
     inputNombre.name = "nombre"; //<input id="nopmbre" name="nombre"></input>
     inputNombre.type = "text"; //<input id="nombre" name="name" type="text"></input>
     inputNombre.placeholder = "Escribe tu nombre"; //<input id="nombre" name="name" type="text" placeholder="Escribe tu nombre"></input>
+    inputNombre.style.background = "#EAF9FD";
 
     //Apellidos
     let labelApellidos = document.createElement("label");
@@ -78,6 +80,7 @@ function cargarDatos() {
     inputApellidos.name = "apellidos";
     inputApellidos.type = "text";
     inputApellidos.placeholder = "Escribe tus apellidos";
+    inputApellidos.style.background = "#EAF9FD";
 
     //Direccion
     let labelDireccion = document.createElement("label");
@@ -90,6 +93,7 @@ function cargarDatos() {
     inputDireccion.name = "direccion";
     inputDireccion.type = "text";
     inputDireccion.placeholder = "Escribe tu dirección"
+    inputDireccion.style.background = "#EAF9FD";
 
     //Telefono
     let labelTelefono = document.createElement("label");
@@ -102,6 +106,7 @@ function cargarDatos() {
     inputTelefono.name = "telefono";
     inputTelefono.type = "tel";
     inputTelefono.placeholder = "Escribe tu número de teléfono"
+    inputTelefono.style.background = "#EAF9FD";
 
     /* Creo los radio button de jugadores */
     let labelJugadores = document.createElement("label");
@@ -398,6 +403,7 @@ function cargarDatos() {
     obs.rows = "4";
     obs.cols = "35";
     obs.id = "obs";
+    obs.style.background = "#EAF9FD"
 
     /*Inserto el textarea en el formulario */
     fieldset.appendChild(br24);
