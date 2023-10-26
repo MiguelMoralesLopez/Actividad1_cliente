@@ -1,12 +1,11 @@
-div.onload = crearNodos;
 
 function crearNodos(){
 
     //Creamos el h1 de la página
-    let titulo = document.createElement('h1')
-    titulo.id='tittle'
+    let titulo = document.createElement("h1")
+    titulo.id="tittle"
     //Nodo texto para el título
-    let textTittle = document.createTextNode('Things about League of Legends')
+    let textTittle = document.createTextNode("Things about League of Legends")
     titulo.appendChild(textTittle)
     
     //Metemos el titutlo en el contenedor, llamando al objeto mediante el getByID
@@ -345,5 +344,6 @@ function crearNodos(){
 
     
 
-
 }
+
+window.onload = crearNodos;
