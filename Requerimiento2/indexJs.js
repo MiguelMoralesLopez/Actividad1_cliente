@@ -1,5 +1,5 @@
 
-function comprobarCampos(){
+function procesar(){
     let compro1 = nombre
     let compro2 = apellidos
     let compro3 = telefono
@@ -33,7 +33,7 @@ function comprobarCampos(){
     
 
 
-    function size(){
+
 
     let tamano1 = document.getElementById("peque")
     console.log(peque)
@@ -66,9 +66,6 @@ function comprobarCampos(){
     }
     
     let iPrecioSize = parseInt(precioSize)
-}
-
-    function ingredientes(){
 // Configuración ingredientes
         let ig1 = pina
         let ig2 = jamon
@@ -98,7 +95,7 @@ function comprobarCampos(){
             console.log(precioFood)
         }
 
-    
+
         //Comprobacion precio ingredientes
         let iPrecioFood = parseInt(precioFood)
         if(ig1.checked == false  && ig2.checked == false && ig3.checked == false && ig4.checked == false){
@@ -108,15 +105,14 @@ function comprobarCampos(){
         else{
             noFood.style.display = "none"
         }
-    }
         
-       function procesar(){
+        //Comprobación precio final
 
         let final = iPrecioFood+iPrecioSize
         let textFin = "El precio es "+ final + "€"
         document.getElementById("result").textContent = textFin
         
-       }
+        
     
 
 }
