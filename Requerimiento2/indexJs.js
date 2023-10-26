@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     function calcularPrecio(){
-        //validarFormulario()
+        validarFormulario()
         precio.parentNode.removeChild(precio);
         let size = 0
         size = comprobarSize()
