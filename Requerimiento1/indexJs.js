@@ -1,3 +1,8 @@
+function abrirpagina(){
+    window.onload = crearNodos;
+}
+
+
 function crearNodos(){
 
     //Creamos el h1 de la página
