@@ -1,7 +1,4 @@
-function abrirpagina(){
-    window.onload = crearNodos;
-}
-
+div.onload = crearNodos;
 
 function crearNodos(){
 

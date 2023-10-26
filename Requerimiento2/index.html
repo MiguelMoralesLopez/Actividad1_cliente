@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="indexJs.js"></script>
+    <script type="text/javascript" src="prueba.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Página para pedir pizza</title>
 </head>
 <body>
     <div id="contenedor">
         <h1>Pizzerias Wayne</h1>
-        <form>
+       
             <fieldset id="datos">
                 <legend>Introduce tus datos</legend>
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre"  placeholder="Introduce tu nombre">
+                <input type="text" id="nombre" name="nombre"  placeholder="Introduce tu nombre" required="true">
                 <label for="apellidos">Apellidos</label>
-                <input type="text" id="apellidos" name="apellidos"  placeholder="Introduce tus apellidos">
+                <input type="text" id="apellidos" name="apellidos"  placeholder="Introduce tus apellidos" required="true">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono"  placeholder="Introduce tu telefono">
+                <input type="tel" id="telefono" name="telefono"  placeholder="Introduce tu telefono" required="true">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Introduce tu email" autocomplete="email">
-
+                <input type="text" id="email" name="email" placeholder="Introduce tu email" autocomplete="email" required="true">
+                <p id = "noText"></p>
             </fieldset>
             <fieldset id ="pizza">
                 <legend>Elige su pizza</legend>
                 
                     <h3>Elige el tamaño</h3>
                     <label for="peque">Pequeño</label>
-                    <input type="radio" name="tamano" id="peque">
+                    <input type="radio" name="tamano" id="peque" value="peque">
                     <label for="mediano">Mediano</label>
-                    <input type="radio" name="tamano" id="mediano" checked="true">
+                    <input type="radio" name="tamano" id="mediano" value="mediano">
                     <label for="grande">Grande</label>
-                    <input type="radio" name="tamano" id="grande">
+                    <input type="radio" name="tamano" id="grande" value="grande">
+                    <p id="noSize">No has elegido un tamaño!</p>
 
                     <h3>Elija sus ingredientes</h3>
                     <label for="pina">Piña</label>
@@ -43,16 +44,19 @@
                     <input type="checkbox" name="bacon" id="bacon">
                     <label for="queso">Queso</label>
                     <input type="checkbox" name="queso" id="queso">
+                    <p id="noFood">No has elegido ingredientes</p>
 
-                    <br/>
-                    <br/>
-                    <button onclick="comprobarCampos()">Procesar pedido</button>
+                    <br/><br/>
+                    <button id="proc" onclick="procesar()">Procesar pedido</button>
+
+                    <p id="result">Precio: 0€</p>
+                    
 
 
             </fieldset>
 
 
-        </form>
+       
     </div>
     
 </body>

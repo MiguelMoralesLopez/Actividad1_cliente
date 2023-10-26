@@ -3,3 +3,27 @@ body{
     justify-content: left;
     padding-left: 30px;
 }
+#noText{
+    color:red;
+    display: none;
+    font-weight: bold;
+}
+
+#noSize{
+    color : red;
+    display: none;
+    font-weight: bold;
+
+}
+#noFood{
+    color: red;
+    display: none;
+    font-weight: bold;
+}
+
+#result{
+    color: black;
+    display: block;
+    font-weight: bold;
+
+}
