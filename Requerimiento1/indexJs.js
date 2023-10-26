@@ -271,6 +271,7 @@ function crearNodos(){
 
     }
 
+    //Campo textarea
     let p5 = document.createElement("p");
     let contP5 = document.createTextNode("Observaciones: ");
     p5.appendChild(contP5);
@@ -284,6 +285,7 @@ function crearNodos(){
     let br = document.createElement("br");
     formulario.appendChild(br);
 
+    //Submit y reset
     let submit = document.createElement("input");
     submit.type = "submit"
     formulario.appendChild(submit)
