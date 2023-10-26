@@ -1,83 +1,118 @@
 
-        console.log("falta")
-    function precioFinal(){
-                let precTamano = 0
-                precTamano = comprobarTamano()
-                let precIng = 0
-                precIng = comprobarIng()
-                let precioFinal
-                precioFinal = comprobarIng + comprobarTamano
-
-                
+function procesar(){
+    let compro1 = nombre
+    let compro2 = apellidos
+    let compro3 = telefono
+    let compro4 = email
+    let array1 = []
+    array1.push(nombre,apellidos,telefono,email)
+    console.log(array1)
+    let faltaAlgo = false
+    let teFalta = ""
+    let contador = 0
+    noText.textContent = "Te falta de rellenar: "
+    
+    for(let campo of array1){
+        if(campo.value.trim() ==""){
+            teFalta = campo.id+', '
+            noText.textContent += teFalta
+            contador ++
         }
         
-
-       
-
-      function comprobarTamano(){
-        let 
-        let precioTamano = 0;
-        if(document.getElementById("peque").checked){
-                precioTamano=10
-        }
-        else
-        if(document.getElementById("mediano").checked){
-                precioTamano=15
-        }
-        else
-        if(document.getElementById("grande").checked){
-                precioTamano=20
-        }
-        return precioTamano;
-
-      }
-
-      function comprobarIng(){
-        let precioIng = 0;
-        if(document.getElementById("pina").checked){
-        precioIng +=2;}
-        else if(document.getElementById("jamon").checked){
-        precioIng +=2;}
-        else if(document.getElementById("bacon").checked){
-        precioIng +=2;
-        }
-        else if(document.getElementById("queso").checked){
-        precioIng+=2;
-        }
-        return precioIng;
-      }
-
-      function procesar(){
-        let correcto1 = false;
-        let correcto2 = false;
-        
-       if( (document.getElementById("peque").checked == false) && (document.getElementById("mediano").chequed == false) && (document.getElementById("grande").checked==false)){
-        console.log("no elegiste tamaño")
-        correcto1 = true;
-       }
-       if( (document.getElementById("jamon").checked == false) && (document.getElementById("pina").chequed == false) && (document.getElementById("bacon").checked==false) && (document.getElementById("queso").chequed == false)){
-        console.log("no elegiste ingrediente")
-        correcto2 = true
-       }
-
-       if(correcto1==true && correcto2==true){
-        console.log("correcto")
-        precioFinal();
-       }
-       else
-       alert("Faltan cosas illo")
-
-       
-      }
+    }
+    
+    
+   
+    if(contador ==0){
+        noText.style.display = "none"
+    }
+    else{
+    noText.style.display = "block"
+    }
+    
+    
 
 
-     
 
 
-      
+    let tamano1 = document.getElementById("peque")
+    console.log(peque)
+    let tamano2 = mediano
+    let tamano3 = grande
+
+    let precioSize = 0
+    if(tamano1.checked == true){
+        precioSize = 5
+        console.log("precio cambiado a 5")
+        noSize.style.display = "none"
+    }
+    else
+    if(tamano2.checked == true){
+        precioSize = 10
+    console.log("precio cambiado a 10")
+    noSize.style.display = "none"
+    }
+    else
+    if(tamano3.checked == true){
+        precioSize = 15
+        console.log("precio cambiado a 15")
+        noSize.style.display = "none"
+    }
+    else{
+        console.log("No se eligió tamaño")
+        noSize.style.display = "block"
         
 
+    }
+    
+    let iPrecioSize = parseInt(precioSize)
+// Configuración ingredientes
+        let ig1 = pina
+        let ig2 = jamon
+        let ig3 = bacon 
+        let ig4 = queso
+        let precioFood = 0
 
+        if (ig1.checked == true){
+            console.log("Que sacrilegio!")
+            precioFood ++;
+            console.log(precioFood)
+        }
+        
+        if (ig2.checked == true){
+            precioFood ++;
+            console.log(precioFood)
+        }
+        
+        if (ig3.checked == true){
+            precioFood ++;
+            console.log(precioFood)
+        
+        }
+        
+        if (ig4.checked == true){
+            precioFood ++;
+            console.log(precioFood)
+        }
 
+            
+        //Comprobacion precio ingredientes
+        let iPrecioFood = parseInt(precioFood)
+        if(ig1.checked == false  && ig2.checked == false && ig3.checked == false && ig4.checked == false){
+            console.log("No hay nada")
+            noFood.style.display = "block"
+        }
+        else{
+            noFood.style.display = "none"
+        }
+        
+        //Comprobación precio final
 
+        let final = iPrecioFood+iPrecioSize
+        let textFin = "El precio es "+ final + "€"
+        document.getElementById("result").textContent = textFin
+        
+        
+    
 
+}
