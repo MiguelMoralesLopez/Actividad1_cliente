@@ -1,4 +1,26 @@
 body{
-    display: flex;
-    justify-content: center;
+    
+    background-image: url("img/fondo.jpg");
+}
+
+h1{
+    margin-left: 35px;
+    color: white
+}
+
+form{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 35px;
+    max-width: 30%;
+}
+
+label{
+    margin-right: 15px;
+}
+
+select{
+    margin-right: 5%;
+    margin-bottom: 3%;
 }
