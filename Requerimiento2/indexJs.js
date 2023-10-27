@@ -9,7 +9,6 @@ function procesar(){
     let array1 = []
     array1.push(nombre,apellidos,telefono,email)
     console.log(array1)
-    let faltaAlgo = false
     let teFalta = ""
     let contador = 0
     noText.textContent = "Te falta de rellenar: "
@@ -37,7 +36,6 @@ function procesar(){
     //Parte 2   
     //Comprueba qué opción ha sido elegida para asignarle un precio u otro
     let tamano1 = document.getElementById("peque")
-    console.log(peque)
     let tamano2 = mediano
     let tamano3 = grande
 
@@ -116,7 +114,7 @@ function procesar(){
         
         //Comprobación precio final
         // Si está todo correcto entonces saca el precio final por pantalla
-        
+
         let final = iPrecioFood+iPrecioSize
         let textFin = "El precio es "+ final + "€"
         document.getElementById("result").textContent = textFin
@@ -125,3 +123,5 @@ function procesar(){
     
 
 }
+
+//https://github.com/MiguelMoralesLopez/Actividad1_cliente/tree/kaidi
