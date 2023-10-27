@@ -63,7 +63,7 @@ function procesarPedido() {
     let precioIngre = 0
     precioIngre = calcPrecioIngrediente();
 
-    let precioTotal = document.createTextNode("Precio total: " + (precioTamPizza+precioIngre))
+    let precioTotal = document.createTextNode("Precio total: " + (precioTamPizza+precioIngre) + " €")
     let nuevoPrecio = document. createElement("p")
     nuevoPrecio.appendChild(precioTotal)
     nuevoPrecio.id = "precio"
