@@ -19,6 +19,11 @@ function crearNodos(){
     document.getElementById("contenedor").appendChild(formulario);
 
     //Campos de texto a crear: DNI, nombre, apellidos, dirección y teléfono
+    /*
+        Para crear los campos de texto (así como para la mayoria de elementos del formulario) se ha usado la siguiente estructura:
+        array que contiene los datos + bucle for que recorre dicho array.
+        De esta forma el código queda más limpio y eficiente.
+    */
     let camposTexto = [
         {   for: 'dni',
             nombrelabel: 'DNI: ',
@@ -74,6 +79,7 @@ function crearNodos(){
         input.required = "true";
         formulario.appendChild(label)
         formulario.appendChild(input)
+        //Añado un if que que evalua los objetos creados para poner los saltos de línea donde necesito.
         if ((label.for == "dni") || (label.for == "apellidos")){
             formulario.appendChild(br)
         }
