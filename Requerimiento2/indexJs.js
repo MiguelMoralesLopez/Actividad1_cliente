@@ -1,5 +1,7 @@
 
 function procesar(){
+
+    //PARTE 1 comprueba cada campo y muestra por pantalla lo que falta hasta que estén todos los campos
     let compro1 = nombre
     let compro2 = apellidos
     let compro3 = telefono
@@ -30,11 +32,10 @@ function procesar(){
     
     }
     
+    // -------------------------------------------------------------------
     
-
-
-
-
+    //Parte 2   
+    //Comprueba qué opción ha sido elegida para asignarle un precio u otro
     let tamano1 = document.getElementById("peque")
     console.log(peque)
     let tamano2 = mediano
@@ -58,14 +59,20 @@ function procesar(){
         console.log("precio cambiado a 15")
         noSize.style.display = "none"
     }
+    //Si no se eligió ninguna sale por pantalla este error
     else{
         console.log("No se eligió tamaño")
         noSize.style.display = "block"
         
 
     }
-    
+    //Cuando ya está elegido, parsea el dato para que sea Integer
     let iPrecioSize = parseInt(precioSize)
+
+    //---------------------------------------------------------
+    //Parte 3
+    // Lo primero comprueba qué opciones han sido marcadas, y según la cantidad, 
+    // la variable precio va cambiando
 // Configuración ingredientes
         let ig1 = pina
         let ig2 = jamon
@@ -96,7 +103,8 @@ function procesar(){
         }
 
 
-        //Comprobacion precio ingredientes
+        //Comprueba si está elegido al menos una opción, si no hay ninguna elegida saca por pantalla un aviso 
+
         let iPrecioFood = parseInt(precioFood)
         if(ig1.checked == false  && ig2.checked == false && ig3.checked == false && ig4.checked == false){
             console.log("No hay nada")
@@ -107,7 +115,8 @@ function procesar(){
         }
         
         //Comprobación precio final
-
+        // Si está todo correcto entonces saca el precio final por pantalla
+        
         let final = iPrecioFood+iPrecioSize
         let textFin = "El precio es "+ final + "€"
         document.getElementById("result").textContent = textFin
