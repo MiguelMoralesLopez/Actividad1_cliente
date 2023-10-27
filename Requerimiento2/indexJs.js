@@ -21,13 +21,13 @@ function procesar(){
         
     }
     
-    
    
     if(contador ==0){
         noText.style.display = "none"
     }
     else{
     noText.style.display = "block"
+    
     }
     
     
