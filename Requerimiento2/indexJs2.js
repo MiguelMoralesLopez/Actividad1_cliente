@@ -70,9 +70,31 @@ function calcPrecioIngrediente() {
         return precioIngredientes;
     }
 }
+function alerta(){
+    console.log("aaaaaaaaaaaa")
+}
+function comprobarDatos(){
+     n = (nombre.value == "")
+     d = (direccion.value == "")
+     t = (telefono.value == "")
+     e = (email.value == "")
+    if (n){
+        alert("Inserta el nombre")
+    }
+    if (d){
+        alert("Inserta la direccion")
+    }
+    if (t){
+        alert("Inserta el telefono")
+    }
+    if (e){
+        alert("Inserta el email")
+    }
+}
 
 //funcion procesar el pedido
 function procesarPedido() {
+    comprobarDatos()
     precio.parentNode.removeChild(precio)
 
     let precioTamPizza = 0
@@ -85,4 +107,6 @@ function procesarPedido() {
     nuevoPrecio.appendChild(precioTotal)
     nuevoPrecio.id = "precio"
     formulario.appendChild(nuevoPrecio)
+    
+
 }
