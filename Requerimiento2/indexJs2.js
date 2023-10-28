@@ -71,7 +71,8 @@ function calcPrecioIngrediente() {
     }
 }
 
-
+/* funcion comprobar que los campos nombre, direccion, telefono y email esten rellenos
+   y si no, mostrar una alerta dependiendo del campo que no lo esté */
 function comprobarDatos(){
      n = (nombre.value == "")
      d = (direccion.value == "")
