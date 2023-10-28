@@ -11,7 +11,7 @@ function pizzaChecked() {
         }
     }
     if (!seleccionado) {
-        alert('[ERROR] Debe seleccionar un tamaño');
+        alert('Debe seleccionar un tamaño');
         return false;
     }
     return true;
@@ -28,7 +28,7 @@ function ingreChecked() {
         }
     }
     if (!seleccionada) {
-        alert('[ERROR] Debe seleccionar un ingrediente');
+        alert('Selecciona al menos un ingrediente');
         return false;
     }
     return true;
@@ -70,9 +70,8 @@ function calcPrecioIngrediente() {
         return precioIngredientes;
     }
 }
-function alerta(){
-    console.log("aaaaaaaaaaaa")
-}
+
+
 function comprobarDatos(){
      n = (nombre.value == "")
      d = (direccion.value == "")
