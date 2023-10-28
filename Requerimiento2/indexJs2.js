@@ -1,5 +1,7 @@
 //FUNCIONES
 
+nombre.required = "true"
+
 //funcion validar si esta checked
 function pizzaChecked() {
     tamañoPizza = document.getElementsByName("tamaño");
@@ -11,7 +13,23 @@ function pizzaChecked() {
         }
     }
     if (!seleccionado) {
-        alert('[ERROR] Debe seleccionar uno');
+        alert('[ERROR] Debe seleccionar un tamaño');
+        return false;
+    }
+    return true;
+}
+
+function ingreChecked() {
+    ingrePizza = document.getElementsByName("ingrediente");
+    var seleccionada = false;
+    for (var i = 0; i < ingrePizza.length; i++) {
+        if (ingrePizza[i].checked) {
+            seleccionada = true;
+            break;
+        }
+    }
+    if (!seleccionada) {
+        alert('[ERROR] Debe seleccionar un ingrediente');
         return false;
     }
     return true;
@@ -36,7 +54,7 @@ function calcPrecioTam() {
 function calcPrecioIngrediente() {
     let contador = 0
     
-    if(pizzaChecked()){
+    if(ingreChecked()){
         if (bacon.checked){
             contador++
         }
