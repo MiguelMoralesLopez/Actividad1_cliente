@@ -1,7 +1,5 @@
 //FUNCIONES
 
-nombre.required = "true"
-
 //funcion validar si esta checked
 function pizzaChecked() {
     tamañoPizza = document.getElementsByName("tamaño");
