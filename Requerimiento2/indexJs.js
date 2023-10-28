@@ -22,6 +22,8 @@ function procesar(){
         
     }
     
+
+    
    
     if(contador ==0){
         noText.style.display = "none"

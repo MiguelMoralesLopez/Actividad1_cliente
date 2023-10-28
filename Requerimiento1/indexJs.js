@@ -78,14 +78,15 @@ function crearNodos(){
 
         }
     ]   
-
+    // Usamos un bucle for para que cada campo del array Campos texto pase por los mismos argumentos
     for(let campo of camposTexto){
+        // Primero se crean los br, los label 
         let br = document.createElement('br')
         let label = document.createElement('label')
         label.for = campo.for
         let textoLab = document.createTextNode(campo.textoLabel)
         label.appendChild(textoLab)
-        //Creamos los inputs
+        //Creamos los inputs y los hacemos hijos de formulario
         let input = document.createElement('input')
         input.type = campo.type
         input.name = campo.name
@@ -97,6 +98,7 @@ function crearNodos(){
         formulario.appendChild(input)
         formulario.appendChild(br)
     }
+    // creamos otro array  para los input de selección de radio
 
     let pjs = [
         {
@@ -140,6 +142,8 @@ function crearNodos(){
 
     ]
 
+    //Creamos un fielset para meterlo todo en un recuadro
+    // y le añadimos un texto leyenda
     let fielset = document.createElement('fieldset')
     let legendFiel = document.createElement('legend')
     let textFiel = document.createTextNode('Elige tu personaje favorito')
@@ -147,10 +151,10 @@ function crearNodos(){
     fielset.appendChild(legendFiel)
     formulario.appendChild(fielset)
 
-    //Creamos las opciones
+    //Creamos las opciones con un bucle for para cada objeto del array
+
     for (let pj of pjs){
         
-
         let labelPj = document.createElement('label')
         labelPj.for = pj.for
         let textoPj = document.createTextNode(pj.pjLabel)    
@@ -165,6 +169,7 @@ function crearNodos(){
         fielset.appendChild(inputPj)
 
     }
+
     let wps = [
         {
             for:'shield',
@@ -215,7 +220,8 @@ function crearNodos(){
     fielset2.appendChild(legendFiel2)
     formulario.appendChild(fielset2)
 
-    //Creamos las opciones
+    //Repetimos de nuevo el proceso anterior 
+    // pero esta vez con diferentes ejemplos
     for (let wp of wps){
         let wpLabel = document.createElement('label')
         wpLabel.for = wp.for
@@ -240,7 +246,7 @@ function crearNodos(){
     formulario.appendChild(eleccion)
 
 
-    //Img con checkbox
+    //Img con checkbox, creamos un array para las imágenes
     let skins = [
         {
             src: 'img/1.jpg',
@@ -266,7 +272,8 @@ function crearNodos(){
         }
         
     ]
-    
+    //Con esto hacemos que se suban todas las imágenes además de que 
+    // tendrán un checkbox 
     for (let skin of skins){
     let imagen = document.createElement('img')
     imagen.src = skin.src
@@ -278,7 +285,7 @@ function crearNodos(){
     check.value = skin.pj
     formulario.appendChild(check)
     }
-
+    //Creamos una imagen, y le asignamos su ruta
     let h2 = document.createElement('h3')
     let h2Text = document.createTextNode('Evalua esta Skin del 1 al 5')
     h2.appendChild(h2Text)
@@ -287,7 +294,7 @@ function crearNodos(){
     let miss = document.createElement('img')
     miss.src = 'img/miss.jpg'
     formulario.appendChild(miss)
-
+    //Aqui creamos otro array con los atributos para el select
     let valor = [
         {
             value : '1',
@@ -314,11 +321,12 @@ function crearNodos(){
             nombre : 'Cinco'
         }
     ]
-
+    //aqui creamos un select
     let choose = document.createElement('select')
     choose.name = 'valoracion'
     formulario.appendChild(choose)
    
+    // le asignamos un select a cada opcion, en este caso son 5
     for(let valo of valor){
         let op1 = document.createElement('option')
         op1.value = valo.value
@@ -328,6 +336,7 @@ function crearNodos(){
 
     }
 
+    //creamos un textarea y le definimos el tamaño
     let obs = document.createElement('h3')
     let obsText = document.createTextNode('Sugerencias de mejora de juego')
     obs.appendChild(obsText)
@@ -338,6 +347,8 @@ function crearNodos(){
     txtarea.rows = '10'
     formulario.appendChild(txtarea)
 
+
+    //Creamos el boton para enviar el formulario
     let enviar = document.createElement('input')
     enviar.type = 'submit'
     formulario.appendChild(enviar)
@@ -345,5 +356,7 @@ function crearNodos(){
     
 
 }
-
+//Al cargar la ventaba, se ejecuta la funciín crearNodos
 window.onload = crearNodos;
+
+// https://github.com/MiguelMoralesLopez/Actividad1_cliente/tree/kaidi
