@@ -1,6 +1,6 @@
 //FUNCIONES
 
-//funcion validar si esta checked
+//funcion validar si tamaño esta checked
 function pizzaChecked() {
     tamañoPizza = document.getElementsByName("tamaño");
     var seleccionado = false;
@@ -17,6 +17,7 @@ function pizzaChecked() {
     return true;
 }
 
+//funcion validar si ingrediente esta checked
 function ingreChecked() {
     ingrePizza = document.getElementsByName("ingrediente");
     var seleccionada = false;
@@ -48,7 +49,7 @@ function calcPrecioTam() {
     }
 }
 
-//funcion ingredientes
+//funcion calcular precio ingredientes
 function calcPrecioIngrediente() {
     let contador = 0
     
@@ -70,7 +71,7 @@ function calcPrecioIngrediente() {
     }
 }
 
-//funcion procesar
+//funcion procesar el pedido
 function procesarPedido() {
     precio.parentNode.removeChild(precio)
 
@@ -85,4 +86,3 @@ function procesarPedido() {
     nuevoPrecio.id = "precio"
     formulario.appendChild(nuevoPrecio)
 }
-
