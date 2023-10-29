@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    margin-left: 53px;
+}
+
+form{
+    background-image: url("img/fondoo.png");
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 35px;
+    background-size: cover;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+label{
+    margin-right: 15px;
+}
+
+select{
+    margin-right: 5%;
+    margin-bottom: 3%;
+}
+
+#dni{
+    margin-bottom: 5px;
+}
+#nombre{
+    margin-bottom: 5px;
+}
+#apellidos{
+    margin-bottom: 5px;
+}
+#direccion{
+    margin-bottom: 5px;
+}
+#telefono{
+    margin-bottom: 5px;
+}
