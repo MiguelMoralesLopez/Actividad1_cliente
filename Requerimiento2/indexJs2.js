@@ -74,6 +74,7 @@ function calcPrecioIngrediente() {
 /* funcion comprobar que los campos nombre, direccion, telefono y email esten rellenos
    y si no, mostrar una alerta dependiendo del campo que no lo esté */
 function comprobarDatos(){
+    console.log("entro")
      n = (nombre.value == "")
      d = (direccion.value == "")
      t = (telefono.value == "")
@@ -90,23 +91,34 @@ function comprobarDatos(){
     if (e){
         alert("Inserta el email")
     }
+    if(n == true || d == true || t == true || e == true){
+        return false
+    }
+    else
+        return true
 }
 
 //funcion procesar el pedido
 function procesarPedido() {
-    comprobarDatos()
-    precio.parentNode.removeChild(precio)
+    
 
     let precioTamPizza = 0
     precioTamPizza = calcPrecioTam();
     let precioIngre = 0
     precioIngre = calcPrecioIngrediente();
+    
 
+    if (comprobarDatos() == true){
+    precio.parentNode.removeChild(precio)
     let precioTotal = document.createTextNode("Precio total: " + (precioTamPizza+precioIngre) + " €")
-    let nuevoPrecio = document. createElement("p")
+    let nuevoPrecio = document.createElement("p")
     nuevoPrecio.appendChild(precioTotal)
     nuevoPrecio.id = "precio"
     formulario.appendChild(nuevoPrecio)
+    }
+    else{
+    precio.style.display = "none"
     
-
+    }
+    
 }
